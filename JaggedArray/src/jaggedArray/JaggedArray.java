@@ -1,0 +1,45 @@
+package jaggedArray;
+
+import java.util.Scanner;
+
+public class JaggedArray {
+	public static void jaggedArray() { 
+		
+		Scanner sc = new Scanner(System.in);
+		
+		
+		// tạo ra một jaggedArray
+		System.out.println("Enter the number of sub-arrays: ");
+		int numberOfArrays = sc.nextInt(); 
+		
+		int[][] jaggedArray = new int[numberOfArrays][];
+		
+		
+		// nhập giới hạn phần tử của mảng đầu tiên
+		
+		for(int i = 0; i < jaggedArray.length; i++ ) {
+			System.out.println("The length of array " + (i + 1) +  " :");
+			jaggedArray[i] = new int[sc.nextInt()];
+		}
+		
+		// mỗi dòng của mảng nhập giới hạn bao nhiêu phần tử 
+		for(int i = 0 ; i < jaggedArray.length; i++) { 
+			System.out.println("Enter the elements of sub-array" + (i + 1) + ":");
+			for (int y = 0; y < jaggedArray[i].length; y++) {
+				jaggedArray[i][y] = sc.nextInt(); 
+			}
+		}
+		
+		System.out.println("The jagged array is:");
+		for(int i = 0 ; i < jaggedArray.length; i++) { 
+			for (int y = 0; y < jaggedArray[i].length; y++) {
+				System.out.println(jaggedArray[i][y]);
+			}
+		}
+		System.out.println();
+		sc.close();
+	}
+	public static void main(String[] args) { 
+		jaggedArray();
+	}
+}
