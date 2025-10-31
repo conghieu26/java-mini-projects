@@ -1,0 +1,36 @@
+package guessingGameWithUnlimitedRounds;
+
+import java.util.Scanner;
+
+public class Main {
+	public static void guessingNumberGame() {
+		Scanner sc = new Scanner(System.in);
+		
+		int numb= 0; 
+		int k= 5;
+		int randomNumb= (int)(Math.random() * 100); 
+		
+		System.out.println("A number is chosen between 1 and 100.");
+		System.out.println("You have " + k + "attemps to guess correct number");
+		
+		
+		while(numb < k) {
+			System.out.println("Enter your guess:");
+			int guess = sc.nextInt();
+			
+			if (guess == randomNumb) { 
+				System.out.println("Congratulations! You guessed the correct number.");
+				sc.close();
+				break;
+			} else if(guess < randomNumb) {
+				System.out.println("The number is greater than " + guess);
+			} else { 
+				System.out.println("The number is less than " + guess);
+			} 			
+			numb++;
+		}
+		System.out.println("You are exhausted all attemps. the correct number was " + randomNumb);
+		sc.close();
+		
+	}
+}
