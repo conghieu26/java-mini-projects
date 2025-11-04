@@ -6,7 +6,7 @@ public class Main {
 	public static void guessingNumberGame() {
 		Scanner sc = new Scanner(System.in);
 		
-		int numb= 1; 
+		int numb = 1; 
 		int K= 5;
 		int randomNumb= (int)(Math.random() * 100); 
 		boolean guessedCorrectly  = false;
