@@ -86,7 +86,11 @@ public class theory {
 			System.out.println(entry.getKey() + " " + entry.getValue());
 		}
 		
-		
+		/*
+		 * Queue (hàng đợi FIFO)
+		 * LinkedList
+		 * PriorityQueue
+		 */
 		
 	}
 }
