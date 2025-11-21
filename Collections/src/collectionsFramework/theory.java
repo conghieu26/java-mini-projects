@@ -22,6 +22,20 @@ public class theory {
 		
 		System.out.println(names.get(0)); // Hieu
 		
+		/*
+		 * 	Set (không trùng lặp, không có chỉ số)
+		 * 	HashSet → nhanh nhất
+		 * 	LinkedHashSet → có thứ tự thêm vào
+		 * 	TreeSet → sort tăng dần
+		 */
 		
+		Set<String> ids = new HashSet<String>();
+		
+		Set<Integer> ids = new HashSet<>();
+		ids.add(1);
+		ids.add(1); // không thêm
+		ids.add(2);
+
+		System.out.println(ids); // [1,2]
 	}
 }
