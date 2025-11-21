@@ -31,8 +31,6 @@ public class theory {
 		 * 	TreeSet → sort tăng dần
 		 */
 		
-		Set<String> ids = new HashSet<String>();
-		
 		Set<Integer> ids = new HashSet<>();
 		ids.add(1);
 		ids.add(1); // không thêm
@@ -41,7 +39,12 @@ public class theory {
 		System.out.println(ids); // [1,2]
 		
 		/*
-		 * Map (key-value)
+		 * Map (key-value): 
+		 * 		Map là một tập hợp các cặp key → value.
+		 * 		Mỗi key là duy nhất (không được trùng).
+		 * 		Value có thể trùng lặp.
+		 * 		Map không phải là List hay Set, mà là structure riêng biệt để lưu trữ dữ liệu theo cặp.
+
 		 * HashMap
 		 * LinkedHashMap
 		 * TreeMap
@@ -52,5 +55,16 @@ public class theory {
 		scores.put("Long", 90);
 
 		System.out.println(scores.get("Hieu")); // 95
+		
+		// Một số thao tác phổ biến với Map
+		
+		System.out.println(scores.containsKey("Hieu"));// true
+		System.out.println(scores.containsValue(100));  // false
+		
+		// Duyệt Map theo entry
+		for (Map.Entry<String, Integer> entry : scores.entrySet()) {
+			System.out.println(entry.getKey() + " " + entry.getValue());
+		}
+		
 	}
 }
