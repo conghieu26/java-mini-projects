@@ -3,6 +3,7 @@ package collectionsFramework;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.HashSet;
+import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
@@ -23,6 +24,25 @@ public class theory {
 		names.add("Hieu"); // được trùng
 		
 		System.out.println(names.get(0)); // Hieu
+		
+		
+		// Pagination
+		
+		List<String> values = new LinkedList<String>();
+		
+		for(int i = 1; i <= 10; i++) {
+			values.add("item" + i);
+		}
+		
+		int pageSize = 3; 
+		int page = 1;
+		
+		for(int start = 0; start < values.size(); start += pageSize) {
+			int end = Math.min(start + pageSize, values.size()); 
+			values.subList(start, end);
+			page++;
+		}
+		
 		
 		/*
 		 * 	Set (không trùng lặp, không có chỉ số)
@@ -65,6 +85,8 @@ public class theory {
 		for (Map.Entry<String, Integer> entry : scores.entrySet()) {
 			System.out.println(entry.getKey() + " " + entry.getValue());
 		}
+		
+		
 		
 	}
 }
