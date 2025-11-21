@@ -1,8 +1,10 @@
 package collectionsFramework;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
+import java.util.Map;
 import java.util.Set;
 
 
@@ -37,5 +39,18 @@ public class theory {
 		ids.add(2);
 
 		System.out.println(ids); // [1,2]
+		
+		/*
+		 * Map (key-value)
+		 * HashMap
+		 * LinkedHashMap
+		 * TreeMap
+		 */
+		Map<String, Integer> scores = new HashMap<>();
+		
+		scores.put("Hieu", 95);
+		scores.put("Long", 90);
+
+		System.out.println(scores.get("Hieu")); // 95
 	}
 }
