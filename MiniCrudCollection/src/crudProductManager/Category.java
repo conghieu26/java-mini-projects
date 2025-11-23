@@ -1,16 +1,16 @@
 package crudProductManager;
 
 public enum Category {
-	PENDING("Pending"),
-	PROGRESS("Progress");
+	PENDING("pending"),
+	PROCESSING("processing");
 	
 	private String type;
 	
-	Category(String type){
+	Category(String type) {
 		this.type = type;
 	}
 	
-	public String getType() {
-		return type; 
+	public String getCategory() {
+		return this.type;
 	}
 }
