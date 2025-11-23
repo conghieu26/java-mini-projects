@@ -65,7 +65,9 @@ public class ProductService {
 	//-----------------Print Product-----------------
 	
 	public List<Product> printProduct() {
-		return products.stream().sorted(Comparator.comparing(Product::getPrice)).toList();
+	    return products.stream()
+	        .sorted(Comparator.comparing(Product::getPrice))
+	        .toList();
 	}
 	
 	
